@@ -15,6 +15,9 @@ jobs:
    container: python:3.6
    steps:
      - uses: actions/checkout@v1
+     - name: install deps
+       run: python -m pip install pytest
+     
      - name: test using pytest
        run: pytest tests
    
