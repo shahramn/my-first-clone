@@ -17,7 +17,9 @@ jobs:
      - uses: actions/checkout@v1
      - name: install deps
        run: python -m pip install pytest
+     - name: Set up Python
+       uses: actions/setup-python@v2
      
      - name: test using pytest
-       run: pytest tests
+       run: pytest
    
